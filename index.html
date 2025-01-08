@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="dashboard">
+<meta name="author" content="me">
+
+<!-- Bootstrap CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<!-- Dasboard CSS -->
+<link href="plugin/css/dashboard.css" rel="stylesheet" type="text/css"/>
+<!-- Font Awesome  -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" rel="stylesheet" type="text/css"/>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<!-- Roboto Font Family  -->
+<link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+<!-- jQuery -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<!-- JS Chart -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.5.1/chart.min.js"></script>
+</head>
+<body>
+  <!--nav bar -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Dashboard</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    </div>
+  </nav>
+<div class="container-fluid">
+
+
+
+  <!-- dashboard detail -->
+  
+  <div class="container checkbox">
+    <div class="form-check form-switch">
+      <input class="form-check-input float-left"  type="checkbox" role="switch" onclick="dark_mode()">
+      <label class="form-check-label" for="flexSwitchCheckDefault"> Dark Mode</label>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="row">
+      <div id="card_1" class="card">
+          <h2><i class="fa-solid fa-user"></i>  Card 1</h2>
+          <p> Total Card 1 : </p>
+      </div>
+      <br>
+      <div id="card_2" class="card">
+          <h2><i class="fa-regular fa-clipboard"></i> Card 2</h2>
+          <p> Total Card 2 : </p>
+      </div>
+      <br>
+      <div id="card_3" class="card">
+          <h2><i class="fa-solid fa-money-bill-trend-up"></i> Card 3</h2>
+          <p> Total Card 3 : </p>
+      </div>
+     </div>
+  </div>
+
+  <div class="container-fluid">  
+    
+      <div class="row">
+
+        <div class="col-sm-8">
+        <h3> Recently Activities</h3>
+          <table>
+            <tr>
+              <th>Date</th>
+              <th>User</th>
+              <th>Country</th>
+            </tr>
+            <tr>
+              <td>2025-01-03</td>
+              <td>Martin</td>
+              <td>Germany</td>
+            </tr>
+            <tr>
+              <td>2025-01-03</td>
+              <td>Amber Chang</td>
+              <td>Mexico</td>
+            </tr>
+            <tr>
+              <td>2025-01-04</td>
+              <td>Roland</td>
+              <td>Austria</td>
+            </tr>
+            <tr>
+              <td>2025-01-04</td>
+              <td>Helen</td>
+              <td>UK</td>
+            </tr>
+            <tr>
+              <td>2025-01-05</td>
+              <td>Amy </td>
+              <td>Canada</td>
+            </tr>
+            <tr>
+              <td>2025-01-06</td>
+              <td>Elissa</td>
+              <td>Italy</td>
+            </tr>
+          </table>
+        </div>   
+        <div class="col-sm-4">
+          <h3> Top 5 Product </h3>
+            <li>1. Apple </li>
+            <li>2. Banana </li>
+            <li>3. Watermelon </li>
+            <li>4. Kiwi </li>
+            <li>5. Orange </li>
+        </div>
+    </div>   
+  </div>   
+    
+  <br>
+  <div class="container-fluid bg text-center">    
+    <h3><i class="fa-solid fa-magnifying-glass-chart"></i> Analysis</h3><br>
+    <div class="row">
+      
+      <div class="col-sm-4">
+        
+          <canvas id="chart_bar"></canvas>
+      </div>
+      <div class="col-sm-4"> 
+        <p>Line Chart B</p>
+        <canvas id="myChart" width="400" height="200"></canvas>
+      </div>
+      <div class="col-sm-4"> 
+        <p>Polar Chart C</p>
+        <canvas id="js_polar_chart" height="300" width="400"></canvas>
+      </div>
+    
+    </div>
+  </div>
+ 
+ 
+</div>
+<!-- dashboard script -->
+<script src="plugin/js/dashboard.js"></script>
+
+</body>
+</html>
+
