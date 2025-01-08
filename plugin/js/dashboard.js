@@ -4,6 +4,7 @@ function dark_mode() {
    var card_2 = document.getElementById("card_2");
    var card_3 = document.getElementById("card_3");
 
+// set dark mode
    check.classList.toggle("dark_mode");
    card_1.classList.toggle("card-dark");
    card_2.classList.toggle("card-dark");
@@ -11,6 +12,7 @@ function dark_mode() {
 
 }
 
+// bar data example
 var data = {
     labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul"],
     datasets: [{
@@ -48,7 +50,7 @@ var data = {
     data: data
 });
 
-
+// line graph example
 var ctx = document.getElementById('myChart').getContext('2d');
 var chart_a = new Chart(ctx, {
 	type: 'line', 
@@ -156,32 +158,3 @@ var chart_a = new Chart(ctx, {
     });
 
   Chart.defaults.global.animation.duration = animationTime; 
-
-  var oilCanvas = document.getElementById("pieChart");
-  Chart.defaults.global.defaultFontSize = 18;
-  
-  var oilData = {
-      labels: [
-          "Saudi Arabia",
-          "Russia",
-          "Iraq",
-          "United Arab Emirates",
-          "Canada"
-      ],
-      datasets: [
-          {
-              data: [133.3, 86.2, 52.2, 51.2, 50.2],
-              backgroundColor: [
-                  "#FF6384",
-                  "#63FF84",
-                  "#84FF63",
-                  "#8463FF",
-                  "#6384FF"
-              ]
-          }]
-  };
-  
-  var pieChart = new Chart(oilCanvas, {
-    type: 'pie',
-    data: oilData
-  });
